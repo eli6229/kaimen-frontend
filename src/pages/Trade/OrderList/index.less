@@ -1,0 +1,158 @@
+.container {
+  padding: 24px;
+  background: #f0f2f5;
+
+  .searchCard {
+    margin-bottom: 16px;
+  }
+
+  .filterRow {
+    .filterItem {
+      display: flex;
+      align-items: center;
+
+      .filterLabel {
+        white-space: nowrap;
+        margin-right: 8px;
+        color: #666;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .statsInfo {
+    padding: 12px 16px;
+    background: #fff;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .tabsCard {
+    margin-bottom: 16px;
+
+    :global {
+      .ant-radio-button-wrapper {
+        margin-right: 8px;
+        margin-bottom: 8px;
+        border-radius: 4px !important;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .batchCard {
+    margin-bottom: 16px;
+    background: #e6f7ff;
+    border-color: #91d5ff;
+  }
+
+  .tableCard {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 3%);
+  }
+
+  // 商品信息样式
+  .productInfo {
+    .orderHeader {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      margin-bottom: 12px;
+
+      .orderNo {
+        font-weight: 500;
+        color: #000;
+      }
+
+      .orderTime {
+        color: #999;
+        font-size: 12px;
+      }
+    }
+
+    .productDetail {
+      display: flex;
+      gap: 12px;
+
+      .productText {
+        flex: 1;
+
+        .productName {
+          font-size: 14px;
+          color: #000;
+          margin-bottom: 8px;
+          line-height: 1.5;
+          display: box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+        }
+
+        .productSpec {
+          font-size: 12px;
+          color: #999;
+        }
+      }
+    }
+  }
+
+  // 买家信息样式
+  .buyerInfo {
+    font-size: 13px;
+    line-height: 1.8;
+
+    > div {
+      &:first-child {
+        color: #000;
+      }
+
+      &:last-child {
+        color: #666;
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1400px) {
+  .container {
+    .filterRow {
+      .filterItem {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+
+    .searchCard,
+    .statsInfo,
+    .tabsCard,
+    .batchCard,
+    .tableCard {
+      margin-bottom: 12px;
+    }
+
+    .filterRow {
+      .filterItem {
+        width: 100%;
+        margin-bottom: 12px;
+
+        .filterLabel {
+          width: 80px;
+        }
+      }
+    }
+
+    .productInfo {
+      .productDetail {
+        flex-direction: column;
+      }
+    }
+  }
+}
